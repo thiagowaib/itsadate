@@ -1,5 +1,4 @@
 import { PrismaClient } from "@prisma/client";
-import IPerson from "@/interfaces/IPerson";
 
 const prisma = new PrismaClient();
 

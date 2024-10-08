@@ -14,7 +14,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <body className='text-center px-8 py-14 font-mono w-screen h-screen overflow-hidden bg-gray-50 text-gray-900'>
         <header className='flex align-middle justify-center'>
-          <h1 className='text-3xl'>It's a Date 💜</h1>
+          <h1 className='text-3xl'>It&apos;s a Date 💜</h1>
         </header>
         {children}
         <footer className='absolute bottom-5 w-full flex justify-center text-gray-300'>feito com s2 por&nbsp; 

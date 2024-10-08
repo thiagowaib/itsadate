@@ -4,6 +4,7 @@ import IPerson from '@/interfaces/IPerson';
 import Loading from '../_components/loading';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 
 export default async function PersonId({ params }: { params: { personTag: string } }) {
     const person = await getPersonWithImage(params.personTag);  // Faz a requisição ao banco de dados no lado do servidor
@@ -25,7 +26,7 @@ function PersonDetails({ person }: { person: IPerson | null }) {
     return (
         <>
             <section className='animate-fadeIn flex flex-col items-center justify-center border-gray-100 border-2 w-fit mx-auto h-fit p-4 rounded-xl mt-16'>
-                <img className='w-96 rounded-full h-96 object-cover bg-center' src={`data:image/png;base64,${person.thumb}`} alt={`Imagem de ${person.name}`} />
+                <Image className='w-96 rounded-full h-96 object-cover bg-center' src={`data:image/png;base64,${person.thumb}`} alt={`Imagem de ${person.name}`} />
                 <h2 className='text-4xl p-4 my-2'>Oiee&nbsp; 
                     <span className="italic">{person.name}</span>
                 </h2>
